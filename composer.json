@@ -1,0 +1,13 @@
+{
+    "name": "jails/li3_bigbang",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/jails/lithium.git"
+        }
+    ],
+    "require": {
+        "unionofrad/lithium": "dev-master",
+        "composer/installers": "dev-master"
+    }
+}

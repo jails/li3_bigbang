@@ -1,0 +1,4 @@
+libraries/*
+atoms/**/resources/tmp/*
+composer.lock
+vendor

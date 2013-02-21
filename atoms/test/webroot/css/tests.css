@@ -1,0 +1,219 @@
+/**
+ * Lithium: the most rad php framework
+ *
+ * @copyright     Copyright 2013, Union of RAD (http://union-of-rad.org)
+ * @license       http://opensource.org/licenses/bsd-license.php The BSD License
+ */
+
+.lithium-test .test-content h2 {
+    float: left;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+.test-content h2 span {
+    color: #aaaaaa;
+    display: block;
+    font-size: 10px;
+	line-height: 12px;
+}
+
+.lithium-test .filters {
+    display: block;
+    float: right;
+}
+
+.lithium-test ul ul {
+	margin-left: 10px;
+}
+
+.lithium-test .test-assert, div.test-exception, div.test-skip {
+	margin: 0 0 20px 0px;
+	padding: 0 0 0 10px;
+	color: #000000;
+	border: 1px solid #aaaaaa;
+	border-width: 0 0 0 4px;
+	font-size: 16px;
+}
+
+.lithium-test .test-assert-passed {
+	border-left-color: #B94A48;
+}
+
+.lithium-test .test-assert-failed {
+	color: #B94A48;
+	border-left-color: #B94A48;
+}
+
+.lithium-test .test-assert span.content,
+.lithium-test .test-exception span.content,
+.lithium-test .test-skip span.content,
+.lithium-test .test-assert span.trace,
+.lithium-test .test-exception span.trace,
+.lithium-test .test-skip span.trace {
+	display: block;
+	clear: both;
+	white-space: pre;
+	color: #111;
+	font-size: 12px;
+	background: #fafafa;
+	margin: 6px 0px 0px 0px;
+	padding: 6px 12px;
+	border: 1px solid #eeeeee;
+	font-family: 'Andale Mono', Monaco, Courier, monospace !important;
+}
+
+.lithium-test table.metrics {
+	border: 1px solid #eeeeee;
+}
+.lithium-test table.metrics {
+	border-collapse: collapse;
+}
+.lithium-test table.metrics th {
+	padding: .5em 	1em;
+	color: black;
+	background: #eeeeee;
+	font-weight: normal;
+}
+.lithium-test table.metrics th, table.metrics td {
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.lithium-test td.metric-name {
+	text-align: left;
+	white-space: nowrap;
+	padding: 6px 8px;
+	background: #e6e6e6;
+	width: 35%;
+}
+.lithium-test tr:hover td.metric-name {
+	background: #fafafa;
+}
+.lithium-test td.metric {
+	font-family: 'Andale Mono', Monaco, Courier, monospace !important;
+	padding: 6px 8px;
+	width: 65%;
+	background: #f5f5f5;
+}
+.lithium-test tr:hover td.metric {
+	background: white;
+}
+
+div.code-coverage-results, h4.code-coverage-name {
+	clear: both;
+	color: #000000;
+	font-size: .8em;
+	font-family: 'Andale Mono', Monaco, Courier, monospace !important;
+	background-color: #fafafa;
+	border: 1px solid #e6e6e6;
+	border: 1px solid rgba(0,0,0,.1);
+	-moz-box-shadow: 0 0 6px rgba(0,0,0,.15);
+	-webkit-box-shadow: 0 0 6px rgba(0,0,0,.15);
+	box-shadow: 0 0 6px rgba(0,0,0,.15);
+}
+
+h4.coverage {
+	color: #454545;
+	margin: 2em 0 .5em;
+	font-weight: normal;
+	padding: 0;
+}
+
+h4.code-coverage-name {
+	color: #999;
+	background-color: #ECECEC;
+	border-top: none;
+	padding: 0.25em 0.5em;
+	margin: 0 1px 0 0;
+	font-weight: normal;
+	float: right;
+}
+
+div.code-coverage-results div.code-line {
+	display: block;
+	float: none;
+	clear: both;
+}
+
+div.code-coverage-results span.content {
+	display: block;
+	clear: right;
+	white-space: pre;
+	line-height: 1.5em;
+	min-height: 1.5em;
+	background: black;
+}
+
+div.code-coverage-results div.uncovered span.content {
+	color: #FFD8D8;
+	background-color: #260000;
+}
+
+div.code-coverage-results div.covered span.content {
+	color: #DDFDCB;
+	background-color: #0C2600;
+}
+
+div.code-coverage-results div.ignored span.content {
+	color: rgba(255,255,255,.5);
+}
+
+div.code-coverage-results span.line-num {
+	display: block;
+	float: left;
+	width: 3em;
+	color: #999;
+	background-color: #ECECEC;
+	text-align: right;
+	border-right: 1px solid #ccc;
+	padding-right: 4px;
+	margin-right: 5px;
+	line-height: 1.5em;
+}
+
+div.code-coverage-results .code-line:hover span.line-num {
+	background: #ddd;
+	color: #666;
+}
+
+div.code-coverage-results span.line-num strong {
+	color: #666;
+}
+
+div.code-coverage-results div.start {
+	margin-top: 30px;
+	padding-top: 5px;
+	border: 1px solid #aaa;
+	border-width: 1px 1px 0px 1px;
+}
+
+div.code-coverage-results div.end {
+	margin-bottom: 30px;
+	padding-bottom: 5px;
+	border: 1px solid #aaa;
+	border-width: 0px 1px 1px 1px;
+}
+
+div.code-coverage-results div.realstart {
+	margin-top: 0px;
+}
+
+div.code-coverage-results p.note {
+	color: #bbb;
+	padding: 5px;
+	margin: 5px 0 10px;
+	font-size: .8em;
+}
+
+div.code-coverage-results span.result-bad {
+	color: #a00;
+}
+
+div.code-coverage-results span.result-ok {
+	color: #fa0;
+}
+
+div.code-coverage-results span.result-good {
+	color: #0a0;
+}
+
