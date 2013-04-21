@@ -11,25 +11,25 @@ use lithium\net\http\Media;
 
 /**
  * Default application attachment
- * 
+ *
  * Warning : an empty prefix like bellow mean it matches any prefix this mean the libraries
  * attached to this kind of rule must be included last (i.e in the boostrap `libraries.php` file)
  * for having its routes exectuted last otherwise it'll be always match.
  */
 Router::attach('app', ['prefix' => '']);
-Media::attach('app', ['prefix' => 'app']);
+Media::attach('app', ['prefix' => 'apps/app']);
 
 /**
  * Admin application attachment which use the same media as the default application.
  */
-Router::attach('admin', ['prefix' => 'admin/toto']);
-Media::attach('admin', ['prefix' => 'app']);
+Router::attach('admin', ['prefix' => 'admin']);
+Media::attach('admin', ['prefix' => 'apps/app']);
 
 /**
  * Test application
  */
-Router::attach('test', ['prefix' => '']); 
-Media::attach('test', ['prefix' => 'test']);
+Router::attach('test', ['prefix' => 'test']);
+Media::attach('test', ['prefix' => 'apps/test']);
 
 /**
  * Common assets
