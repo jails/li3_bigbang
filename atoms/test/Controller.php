@@ -21,6 +21,13 @@ use test\Dispatcher;
 class Controller extends \lithium\core\Object {
 
 	/**
+	 * Saved context.
+	 *
+	 * @var array
+	 */
+	protected $_context = array();
+
+	/**
 	 * Magic method to make Controller callable.
 	 *
 	 * @see lithium\action\Dispatcher::_callable()
@@ -85,8 +92,10 @@ class Controller extends \lithium\core\Object {
 		$medias = Media::attached();
 		$media = Media::scope();
 		Media::reset();
-		
+
+		$this->_saveCtrlContext();
 		$report = Dispatcher::run($group, $options);
+		$this->_restoreCtrlContext();
 
 		foreach($medias as $name => $config) {
 			Media::attach($name, $config);
@@ -123,6 +132,28 @@ class Controller extends \lithium\core\Object {
 		$menu = array_unique($menu);
 		sort($menu);
 		return $menu;
+	}
+
+	protected function _saveCtrlContext() {
+		$this->_context['scope'] = Router::scope(false);
+		$this->_context['routes'] = Router::get();
+		$this->_context['scopes'] = Router::attached();
+		Router::reset();
+	}
+
+	protected function _restoreCtrlContext() {
+		Router::reset();
+		foreach ($this->_context['routes'] as $scope => $routes) {
+			Router::scope($scope, function() use ($routes) {
+				foreach ($routes as $route) {
+					Router::connect($route);
+				}
+			});
+		}
+		foreach ($this->_context['scopes'] as $scope => $attachment) {
+			Router::attach($scope, $attachment);
+		}
+		Router::scope($this->_context['scope']);
 	}
 }
 
