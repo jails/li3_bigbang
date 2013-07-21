@@ -28,7 +28,7 @@ Media::attach('admin', ['prefix' => 'apps/app']);
 /**
  * Test application
  */
-Router::attach('test', ['prefix' => 'test']);
+Router::attach('test', ['prefix' => '']);
 Media::attach('test', ['prefix' => 'apps/test']);
 
 /**
